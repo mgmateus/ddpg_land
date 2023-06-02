@@ -1,0 +1,4 @@
+<launch>    
+    
+    <node name="vision" pkg="ddpg_land_pkg" type="vision_node" output="screen" />
+</launch>

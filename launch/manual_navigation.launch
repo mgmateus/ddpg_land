@@ -1,0 +1,12 @@
+<launch>
+	<arg name="ep" default="0"/> 
+	<arg name="is_firstEp" default="False"/> 
+	<include file="$(find airsim_ros_pkgs)/launch/airsim_node.launch"/>
+
+	
+	<node name="manual" pkg="ddpg_land_pkg" type="manual_navigation.py" output="screen">
+		<param name="ep"  value="$(arg ep)"/>
+		<param name="is_firstEp"  value="$(arg is_firstEp)"/>
+	</node>
+	
+</launch>
